@@ -9,8 +9,9 @@ namespace Database_Connection_Design_using_Csharp
 
         public DbConnection(string _ConnectionString)
         {
-            if(string.IsNullOrEmpty(_ConnectionString)) 
-                throw new ArgumentNullException(nameof(_ConnectionString));
+
+            if (string.IsNullOrEmpty(_ConnectionString))
+                throw new ArgumentNullException(nameof(_ConnectionString), "Connection String must be provided");
             this.ConnectionString = _ConnectionString;
 
         }
