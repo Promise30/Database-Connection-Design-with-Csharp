@@ -11,20 +11,16 @@ namespace Database_Connection_Design_using_Csharp
         
         static void Main(string[] args)
         {
-            //SqlConnection sqlite = new SqlConnection("SqliteConnectionString");
-            //sqlite.OpenConnection();
-            //sqlite.CloseConnection();
+            DbCommand dbCommand = new DbCommand(new SqlConnection("SqliteConnectionString"), "Run the Sql query now using Sql Database");
+            dbCommand.Execute();
 
-            //OracleConnection oracleDb = new OracleConnection("OracelDbConnectionString");
-            //oracleDb.OpenConnection();
-            //oracleDb.CloseConnection();
+            Console.WriteLine("");
 
-            // SqlConnection sqlite = new SqlConnection("WXY72110");
-            DbCommand db = new DbCommand(new SqlConnection("WXYZ123"), "This is SqlDatabase instruction");
-            db.Execute();
-            
+            DbCommand Command = new DbCommand(new OracleConnection("OracleConnectionString"), "Run the Oracle query now using Oracle Database");
+            Command.Execute();
 
-            
+
+
             Console.ReadKey();
         }
     }
